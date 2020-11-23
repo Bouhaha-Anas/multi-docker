@@ -7,7 +7,7 @@ before_install:
   - docker build -t anasso/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e -CI=true anasso/react-test npm run test -- --coverage
+  - docker run -e -CI=true anasso/react-test npm test -- --coverage
 
 after_success:
   - docker build -t anasso/multi-client ./client
