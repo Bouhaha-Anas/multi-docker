@@ -19,7 +19,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   
   # Take those images and push them to Docker hub
-  - docker push anasso/multi-client ./client
-  - docker push anasso/multi-nginx ./nginx
-  - docker push anasso/multi-server ./server
-  - docker push anasso/multi-worker ./worker
+  - docker push anasso/multi-client
+  - docker push anasso/multi-nginx 
+  - docker push anasso/multi-server
+  - docker push anasso/multi-worker
